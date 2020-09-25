@@ -4,4 +4,8 @@
     - name: Hello Message
       debug:
         msg: "Hello World!we1"
+    - name: ansible create directory example
+      file:
+        path: /tmp/devops_directory
+        state: directory
 
