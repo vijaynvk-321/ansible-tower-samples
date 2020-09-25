@@ -6,6 +6,6 @@
         msg: "Hello World!dsacdswe1"
     - name: ansible create directory example
       file:
-        path: /tmp/devops_directory
+        path: /hoe/ubuntu/vijay
         state: directory
 
