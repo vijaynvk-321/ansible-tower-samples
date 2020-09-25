@@ -3,7 +3,7 @@
   tasks:
     - name: Hello Message
       debug:
-        msg: "Hello World!we1"
+        msg: "Hello World!dsacdswe1"
     - name: ansible create directory example
       file:
         path: /tmp/devops_directory
