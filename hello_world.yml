@@ -3,9 +3,6 @@
   tasks:
     - name: Hello Message
       debug:
-        msg: "hjebvhjbfdnjvnjnjgfnjnjnmgf"
-    - name: ansible create directory example
-      file:
-        path: /hoe/ubuntu/vijay
-        state: directory
+        msg: "new db2 created "
+    
 
