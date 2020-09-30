@@ -9,13 +9,12 @@
     #  service: name=postgresql state=restarted enabled=yes
 
     - name: create a table
-      become_user: postgres
-      become_flags: '-i'
-      become: true
       postgresql_table:
         db: postgres
         table: joshidb2
-      
+      become_user: sudo
+     #become_flags: '-i'
+      become: true
 
 
     
