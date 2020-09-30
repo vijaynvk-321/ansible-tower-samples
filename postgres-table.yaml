@@ -1,21 +1,28 @@
-- name: create postgres tabble
-  become: yes
+---
+- name: test
   hosts: all
+  become: yes
   tasks:
     - name: Instalation of postgresql-9.6
       apt:
-        name: postgresql-9.6
+      name: postgresql-9.6
 
-    #- name: start postgresql service
-    #  service: name=postgresql state=restarted enabled=yes
+    - name: start postgresql service
+      service: name=postgresql state=restarted enabled=yes
 
     - name: create a table
       postgresql_table:
         db: postgres
-        table: sample
-      #become_flags: '-i'
-      become: yes
+        table: pradeep12
+       #columns:
+        #- someColumn TEXT COLLATE "C" NOT NULL
+        #- anotherColumn TEXT COLLATE "C" PRIMARY KEY
+        #- bla BYTEA PRIMARY KEY
+        #- CONSTRAINT  mykey PRIMARY KEY (anotherColumn, bla)
       become_user: postgres
+      become: yes
+      vars:
+        ansible_ssh_pipelining: true
 
 
     
