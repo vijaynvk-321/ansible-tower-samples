@@ -1,6 +1,9 @@
 - name: create postgres tabble
   hosts: all
   tasks:
+    - name: Hello Message
+      debug:
+        msg: "hi pradeep"
    # - name: Instalation of postgresql-9.6
    #   apt:
     #  name: postgresql-9.6
@@ -8,12 +11,12 @@
    # - name: start postgresql service
    #   service: name=postgresql state=restarted enabled=yes
       
-    - name: create a database
-      postgresql_table:
-        db: postgres
-        table: joshidb
-      become_user: postgres
-      become: yes
+   # - name: create a database
+   #   postgresql_table:
+    #    db: postgres
+     #   table: joshidb
+    #  become_user: postgres
+    #  become: yes
 
 
 
