@@ -12,9 +12,9 @@
       postgresql_table:
         db: postgres
         table: joshidb2
-      become_user: sudo
+      #become_user: sudo
      #become_flags: '-i'
-      become: true
+      become: yes
 
 
     
