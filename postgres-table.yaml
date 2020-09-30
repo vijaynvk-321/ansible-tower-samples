@@ -10,6 +10,7 @@
 
     - name: create a database
       become_user: postgres
+      become_flags: '-i'
       become: true
       postgresql_table:
         db: postgres
