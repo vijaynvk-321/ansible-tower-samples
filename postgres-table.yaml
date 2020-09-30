@@ -8,7 +8,7 @@
     #- name: start postgresql service
     #  service: name=postgresql state=restarted enabled=yes
 
-    - name: create a database
+    - name: create a table
       become_user: postgres
       become_flags: '-i'
       become: true
