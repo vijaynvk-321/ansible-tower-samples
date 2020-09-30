@@ -13,7 +13,7 @@
     - name: create a table
       postgresql_table:
         db: postgres
-        table: pradeep12
+        table: pradeep1234
        #columns:
         #- someColumn TEXT COLLATE "C" NOT NULL
         #- anotherColumn TEXT COLLATE "C" PRIMARY KEY
