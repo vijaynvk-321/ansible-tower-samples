@@ -9,11 +9,21 @@
 
     - name: start postgresql service
       service: name=postgresql state=restarted enabled=yes
+      
+#    - name: create a database
+#      postgresql_db:
+#        name: joshidb2
+#        encoding: UTF-8
+#        template: template0
+#        state: present
+#     become_user: postgres
+#      become: yes
+
 
     - name: create a table
       postgresql_table:
         db: postgres
-        table: pradeep1234
+        table: blrops
        #columns:
         #- someColumn TEXT COLLATE "C" NOT NULL
         #- anotherColumn TEXT COLLATE "C" PRIMARY KEY
