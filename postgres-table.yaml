@@ -1,26 +1,26 @@
 - name: create postgres tabble
   hosts: all
   tasks:
-    - name: Hello Message
-      debug:
-        msg: "hi pradeep"
     - name: Instalation of postgresql-9.6
       apt:
-        name: postgresql-9.6
+      name: postgresql-9.6
 
-     - name: start postgresql service
-       service: name=postgresql state=restarted enabled=yes
-      
+    - name: start postgresql service
+      service: name=postgresql state=restarted enabled=yes
+
     - name: create a database
       postgresql_table:
         db: postgres
-        table: joshidb
-    #  become_user: postgres
-       become: yes
-       become_method: sudo
-       become_user: root
+        table: joshidb2
+        # columns:
+        #- someColumn TEXT COLLATE "C" NOT NULL
+        #- anotherColumn TEXT COLLATE "C" PRIMARY KEY
+        #- bla BYTEA PRIMARY KEY
+        #- CONSTRAINT  mykey PRIMARY KEY (anotherColumn, bla)
+      become_user: postgres
+      become: yes
 
-
+    
 
     
 
