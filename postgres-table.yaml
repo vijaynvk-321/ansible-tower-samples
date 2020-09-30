@@ -15,7 +15,7 @@
         table: sample
       #become_flags: '-i'
       become: yes
-      become_user: sudo
+      become_user: postgres
 
 
     
