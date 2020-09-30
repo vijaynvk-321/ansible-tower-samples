@@ -11,7 +11,7 @@
     - name: create a database
       postgresql_table:
         db: postgres
-        table: joshidb2
+        table: joshidb
       become_user: postgres
       become: yes
 
