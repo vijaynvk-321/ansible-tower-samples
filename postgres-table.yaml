@@ -23,7 +23,7 @@
     - name: create new table
       postgresql_table:
         db: postgres
-        table: ansible
+        table: rtpops
        #columns:
         #- someColumn TEXT COLLATE "C" NOT NULL
         #- anotherColumn TEXT COLLATE "C" PRIMARY KEY
