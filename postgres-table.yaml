@@ -20,7 +20,7 @@
 #      become: yes
 
 
-    - name: create a table
+    - name: create new table
       postgresql_table:
         db: postgres
         table: blrops
